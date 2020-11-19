@@ -68,7 +68,7 @@ function showOficinas(toShow) {
         document.body.childNodes[3].lastElementChild.lastElementChild.appendChild(newDivIsla) //lo añadimos al final del section#content
         let arrayMuni = toShow.filter(element => element.islaTxt.toLowerCase() == isla.toLowerCase()).map(element => element.municipioTxt) //tenemos un array con todos los municipios de una isla
         let uniqMuni = [...new Set(arrayMuni)] //ahora no tenemos repeticiones
-
+        
         uniqMuni.forEach(muni => {
             let newDivMuni = document.createElement("div"); //crear nodo que engloba toda la informacion de un municipio
             newDivMuni.className = "municipio";
