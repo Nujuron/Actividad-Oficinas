@@ -60,6 +60,7 @@ function showOficinas(toShow) {
     removeNodes() //borrado de nodos
     let arrayIsla = toShow.map(element => element.islaTxt) //tenemos un array con todas las islas en el conjunto
     let uniqIsla = [...new Set(arrayIsla)] //ahora no tenemos repeticiones
+
     uniqIsla.forEach(isla => {
         let newDivIsla = document.createElement("div"); //crear nodo que engloba toda la informacion de una isla
         newDivIsla.className = "isla";
@@ -67,11 +68,13 @@ function showOficinas(toShow) {
         document.body.childNodes[3].lastElementChild.lastElementChild.appendChild(newDivIsla) //lo añadimos al final del section#content
         let arrayMuni = toShow.filter(element => element.islaTxt.toLowerCase() == isla.toLowerCase()).map(element => element.municipioTxt) //tenemos un array con todos los municipios de una isla
         let uniqMuni = [...new Set(arrayMuni)] //ahora no tenemos repeticiones
+
         uniqMuni.forEach(muni => {
             let newDivMuni = document.createElement("div"); //crear nodo que engloba toda la informacion de un municipio
             newDivMuni.className = "municipio";
             document.body.childNodes[3].lastElementChild.lastElementChild.lastElementChild.appendChild(createElementText("h3", `${muni}`))
             document.body.childNodes[3].lastElementChild.lastElementChild.lastElementChild.appendChild(newDivMuni) //lo añadimos al final del ultimo div.isla
+            
             toShow.forEach(office => {
                 if (office.municipioTxt == muni && office.islaTxt == isla) {
                     createNodeOffice(office);
