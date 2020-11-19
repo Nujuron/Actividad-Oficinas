@@ -1,0 +1,72 @@
+/*Mobile first*/
+body{
+    display:flex;
+    flex-direction: column;
+    color:darkblue;
+}
+header,footer{
+    color:white;
+    background-color: darkblue;
+}
+h1{
+    text-decoration: darkblue underline;
+}
+input{
+    border:solid darkblue 2px;
+    border-radius: 10%;
+}
+#filter{
+    color:white;
+    background-color: darkblue;
+}
+#search{
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.96); 
+    box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.96);
+}
+#content{
+    background-color: lightslategrey;
+    
+}
+
+.oficina{
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.96); 
+    box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.96);
+    display:flex;
+    flex-direction: column;
+    
+}
+h4{
+    text-decoration: darkblue underline;
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px){
+    .municipio{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+@media screen and (min-width: 1280px){
+    body{
+        display:grid;
+        grid-template-rows: 100px 1fr 100px;
+    }
+    article{
+        display: grid;
+        grid-template-columns: 20% 80%;
+           
+    }
+    .isla{
+        display:flex;
+        flex-direction: column;
+    }
+    .municipio{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}

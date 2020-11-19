@@ -1,0 +1,15 @@
+{
+  "name": "actividadoficinas",
+  "version": "1.0.0",
+  "description": "Proyecto de Filtrado de oficinas",
+  "main": "./js/main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adrian Brito",
+  "license": "ISC"
+}
